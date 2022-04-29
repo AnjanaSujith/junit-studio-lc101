@@ -24,12 +24,47 @@ public class BalancedBrackets {
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
         for (char ch : str.toCharArray()) {
+            if(brackets<0){
+                return false;
+            }
             if (ch == '[') {
                 brackets++;
             } else if (ch == ']') {
                 brackets--;
             }
+
         }
         return brackets == 0;
+
     }
+
+//    public boolean bracketsMatch(String brackets)
+//    {
+//        int balance = 0;
+//        for (int i = 0; i < brackets.length(); i++)
+//        {
+//            char value = brackets.charAt(i);
+//            if (value == '[')
+//            {
+//                balance += 1;
+//            }
+//
+//            else if (value == ']')
+//            {
+//                balance -= 1;
+//            }
+//
+//        }
+//
+//        if (balance < 0)
+//        {
+//            return false;
+//        }
+//
+//        else
+//        {
+//            return true;
+//        }
+//    }
+
 }
